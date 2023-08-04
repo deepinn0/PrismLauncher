@@ -21,6 +21,8 @@ jobs:
       CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
   create_release:
+    permissions:
+      contents: write
     needs: build_release
     runs-on: ubuntu-latest
     outputs:
